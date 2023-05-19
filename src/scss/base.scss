@@ -156,3 +156,11 @@
     }
   }
 }
+//=============================================
+.title {
+  position: relative;
+  max-width: rem(550);
+  font-weight: 500;
+  @include adaptiveValue("font-size", 52, 20);
+  line-height: math.div(61, 52);
+}

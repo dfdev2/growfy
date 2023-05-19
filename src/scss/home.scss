@@ -1,5 +1,6 @@
 //======================
 .main {
+  @include adaptiveValue("padding-bottom", 100, 15);
   // .main__container
 
   &__container {
@@ -25,11 +26,6 @@
   // .main__title
 
   &__title {
-    position: relative;
-    max-width: rem(550);
-    font-weight: 500;
-    @include adaptiveValue("font-size", 52, 20);
-    line-height: math.div(61, 52);
     &::before {
       content: "";
       position: absolute;
@@ -131,5 +127,207 @@
     }
   }
 }
-
 //=======================
+.brands {
+  @include adaptiveValue("padding-top", 60, 15);
+  @include adaptiveValue("padding-bottom", 60, 15);
+  // .brands__container
+
+  &__container {
+  }
+
+  // .brands__title
+
+  &__title {
+    text-align: center;
+    font-size: rem(14);
+    line-height: math.div(22, 14);
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: rem(25);
+  }
+
+  // .brands__items
+
+  &__items {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(170), 1fr));
+    gap: rem(10);
+  }
+
+  // .brands__item
+
+  &__item {
+  }
+}
+//=============================================
+.services {
+  @include adaptiveValue("padding-top", 100, 15);
+  @include adaptiveValue("padding-bottom", 100, 15);
+  // .services__container
+
+  &__container {
+    display: flex;
+    @include adaptiveValue("column-gap", 100, 20, 1500, 992, 1);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+  }
+
+  // .services__content
+
+  &__content {
+    flex: 0 1 45%;
+    @include adaptiveValue("column-gap", 100, 20);
+    max-width: rem(550);
+    margin: 0 auto;
+    margin-top: rem(220);
+    @media (max-width: $tablet) {
+      margin-top: rem(20);
+    }
+  }
+
+  // .services__btn
+
+  &__btn {
+    font-style: normal;
+    font-weight: 300;
+    font-size: rem(10);
+    line-height: math.div(17, 10);
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $subTitleColor;
+    padding: rem(10) rem(20);
+    border: 1px solid $subTitleColor;
+    border-radius: rem(12);
+    transition: all 0.3s ease 0s;
+    margin-bottom: rem(20);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #5a5656;
+        color: #ffffff;
+      }
+    }
+  }
+
+  // .services__title
+
+  &__title {
+    color: #ffffff;
+    margin-bottom: rem(15);
+  }
+
+  // .services__text
+
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+    color: $subTitleColor;
+    margin-bottom: rem(30);
+  }
+
+  // .services__button
+
+  &__button {
+    padding: rem(18) rem(29);
+  }
+
+  // .services__link
+
+  &__link {
+  }
+
+  // .services__tekhnologi
+
+  &__tekhnologi {
+    flex: 0 1 55%;
+    max-width: rem(670);
+    margin: 0 auto;
+  }
+
+  // .services__items
+
+  &__items {
+    display: flex;
+    @include adaptiveValue("gap", 30, 10);
+    @media (max-width: em(590)) {
+      flex-direction: column;
+    }
+  }
+
+  // .services__item
+
+  &__item {
+    padding: rem(55) rem(25);
+    @media (max-width: $mobile) {
+      padding: rem(25) rem(25);
+    }
+  }
+}
+.button {
+}
+.servis-item {
+  background: rgba(129, 129, 139, 0.1);
+  border-radius: 30px;
+  // .servis-item__left
+
+  &__left {
+    display: flex;
+    gap: rem(30);
+    flex-direction: column;
+    margin-top: rem(45);
+    @media (max-width: em(590)) {
+      margin-top: rem(15);
+      gap: rem(15);
+    }
+  }
+  // .servis-item__right
+  &__right {
+    display: flex;
+    gap: rem(30);
+    flex-direction: column;
+    @media (max-width: em(590)) {
+      gap: rem(15);
+    }
+  }
+  // .servis-item__icon
+
+  &__icon {
+    width: rem(75);
+    height: rem(75);
+    margin-bottom: rem(15);
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .servis-item__subtitle
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(19);
+    line-height: math.div(27, 19);
+    color: #ffffff;
+    margin-bottom: rem(10);
+  }
+
+  // .servis-item__text
+
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    line-height: math.div(24, 16);
+    color: $mainColor;
+  }
+}
