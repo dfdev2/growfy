@@ -4,7 +4,44 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="page"></main>
+      <main class="page">
+        <div class="main">
+          <div class="main__container">
+            <div class="main__content">
+              <h1 class="main__title">
+                Marketing solutions that grow your business.
+              </h1>
+              <p class="main__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor.
+              </p>
+              <div class="main__buttons">
+                <a href="/" class="button">Our services</a>
+                <a href="/" class="button black">Contact us</a>
+              </div>
+            </div>
+            <div class="main__media main-media">
+              <div class="main-media__left left-media">
+                <div class="left-media__image-ibg 1">
+                  <img src="@img/01.jpg" alt="image" />
+                </div>
+                <div class="left-media__image-ibg 2">
+                  <img src="@img/02.jpg" alt="image" />
+                </div>
+              </div>
+              <div class="main-media__right right-media">
+                <div class="right-media__image-ibg 1">
+                  <img src="@img/03.jpg" alt="image" />
+                </div>
+                <div class="right-media__image-ibg 2">
+                  <img src="@img/04.jpg" alt="image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
       @@include('html/_footer.htm',{})
     </div>
     <!-- @@include('html/_popup.htm',{}) -->

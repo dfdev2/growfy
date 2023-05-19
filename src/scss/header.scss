@@ -1,7 +1,6 @@
 .header {
-  @include adaptiveValue("padding-top", 30, 15);
-  @include adaptiveValue("padding-bottom", 30, 15);
-  padding: rem(30) 0;
+  @include adaptiveValue("padding-top", 30, 10);
+  @include adaptiveValue("padding-bottom", 30, 10);
   // .header__container
 
   &__container {
@@ -12,13 +11,14 @@
     color: #fff;
     font-weight: 300;
     @media (max-width: em(800)) {
-      gap: rem(10);
+      gap: rem(20);
     }
     @media (max-width: $mobile) {
       justify-content: space-between;
     }
     @media (max-width: $mobileSmall) {
       padding: 0 rem(5);
+      gap: rem(10);
     }
   }
 
@@ -42,28 +42,32 @@
   &__cart {
     display: flex;
     align-items: center;
-    gap: rem(10);
     padding-right: rem(10);
     z-index: 5;
     background-color: $bodyColor;
     cursor: pointer;
-    & span {
-      border-radius: 50%;
-      background: rgba(129, 129, 139, 0.3);
-      flex: 0 0 rem(30);
-      height: rem(30);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
-
+  // .header__counter
+  &__counter {
+    border-radius: 50%;
+    background: rgba(129, 129, 139, 0.3);
+    flex: 0 0 rem(30);
+    height: rem(30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   // .header__basket
   &__basket {
+  }
+  // .header__counter
+  &__counter {
+    margin-left: rem(5);
   }
   // .header__button
 
   &__button {
+    max-width: rem(130);
   }
 }
 .header-menu {
