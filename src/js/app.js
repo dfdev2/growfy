@@ -68,7 +68,7 @@ flsForms.formFieldsInit();
 //flsForms.formViewpass();
 
 /* Модуль звездного рейтинга */
-//flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль работы с select */
 /*
