@@ -219,17 +219,19 @@
             </div>
             <div class="see__content">
               <div class="see__items">
-                <div class="see__item item-see">
+                <article class="see__item item-see">
                   <div class="item-see__header">
-                    <div class="item-see__icon">
+                    <div class="item-see__icon item-see__icon-1">
                       <img src="@img/see/01.jpg" alt="user" />
                     </div>
-                    <div class="item-see__name">John Doe</div>
-                    <div class="item-see__company">Company Name</div>
+                    <div class="item-see__block">
+                      <div class="item-see__name">John Doe</div>
+                      <div class="item-see__company">Company Name</div>
+                    </div>
                   </div>
-                  <div class="item-see__title title">
+                  <h4 class="item-see__title title">
                     "I recommend this agency"
-                  </div>
+                  </h4>
                   <div class="item-see__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
@@ -271,18 +273,20 @@
                       <div class="rating__value">3.6</div>
                     </div>
                   </div>
-                </div>
-                <div class="see__item item-see">
+                </article>
+                <article class="see__item item-see">
                   <div class="item-see__header">
-                    <div class="item-see__icon">
+                    <div class="item-see__icon item-see__icon-2">
                       <img src="@img/see/02.jpg" alt="user" />
                     </div>
-                    <div class="item-see__name">Alice Smith</div>
-                    <div class="item-see__company">Company Name</div>
+                    <div class="item-see__block">
+                      <div class="item-see__name">Alice Smith</div>
+                      <div class="item-see__company">Company Name</div>
+                    </div>
                   </div>
-                  <div class="item-see__title title">
+                  <h4 class="item-see__title title">
                     "The support is awesome"
-                  </div>
+                  </h4>
                   <div class="item-see__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
@@ -324,18 +328,18 @@
                       <div class="rating__value">3.6</div>
                     </div>
                   </div>
-                </div>
-                <div class="see__item item-see">
+                </article>
+                <article class="see__item item-see">
                   <div class="item-see__header">
-                    <div class="item-see__icon">
+                    <div class="item-see__icon item-see__icon-3">
                       <img src="@img/see/03.jpg" alt="user" />
                     </div>
-                    <div class="item-see__name">Sophia Miller</div>
-                    <div class="item-see__company">Company Name</div>
+                    <div class="item-see__block">
+                      <div class="item-see__name">Sophia Miller</div>
+                      <div class="item-see__company">Company Name</div>
+                    </div>
                   </div>
-                  <div class="item-see__title title">
-                    “A game changer for us”
-                  </div>
+                  <h4 class="item-see__title title">“A game changer for us”</h4>
                   <div class="item-see__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
@@ -377,7 +381,7 @@
                       <div class="rating__value">3.6</div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </div>
@@ -385,7 +389,6 @@
       </main>
       @@include('html/_footer.htm',{})
     </div>
-    <!-- @@include('html/_popup.htm',{}) -->
     @@include('html/_js.htm',{})
   </body>
 </html>
