@@ -157,6 +157,11 @@
   }
 }
 //=============================================
+section {
+  @include adaptiveValue("padding-top", 60, 15);
+  @include adaptiveValue("padding-bottom", 60, 15);
+  border: 1px solid yellow;
+}
 .title {
   position: relative;
   font-weight: 500;

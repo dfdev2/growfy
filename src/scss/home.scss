@@ -1,7 +1,5 @@
 //======================
 .main {
-  @include adaptiveValue("padding-top", 90, 20);
-  @include adaptiveValue("padding-bottom", 50, 20);
   // .main__container
 
   &__container {
@@ -187,8 +185,6 @@
 }
 //=============================================
 .services {
-  @include adaptiveValue("padding-top", 60, 15);
-  @include adaptiveValue("padding-bottom", 100, 15);
   // .services__container
 
   &__container {
@@ -197,6 +193,9 @@
     @media (max-width: $tablet) {
       flex-direction: column;
       row-gap: rem(20);
+    }
+    @media (max-width: $mobileSmall) {
+      row-gap: rem(10);
     }
   }
 
@@ -207,9 +206,9 @@
     @include adaptiveValue("column-gap", 100, 20);
     max-width: rem(550);
     margin: 0 auto;
-    margin-top: rem(220);
-    @media (max-width: $tablet) {
-      margin-top: rem(20);
+    align-self: center;
+    @media (max-width: $mobile) {
+      padding: rem(5) 0;
     }
   }
 
@@ -332,8 +331,6 @@
 }
 //=============================================
 .help {
-  @include adaptiveValue("padding-top", 90, 20);
-  @include adaptiveValue("padding-bottom", 90, 20);
   // .help_container
   &__container {
     position: relative;
@@ -445,8 +442,6 @@
 }
 //=============================================
 .statistic {
-  @include adaptiveValue("padding-top", 90, 20);
-  @include adaptiveValue("padding-bottom", 90, 20);
   // .statistic__container
 
   &__container {
@@ -608,14 +603,6 @@
     height: rem(52);
   }
 }
-.btn {
-}
-.title {
-}
-.text {
-}
-.button {
-}
 .item-see {
   @include adaptiveValue("padding-top", 64, 20);
   @include adaptiveValue("padding-bottom", 64, 20);
@@ -690,4 +677,182 @@
 
   &__rating {
   }
+}
+//=============================================
+.news {
+  // .news__container
+
+  &__container {
+  }
+
+  // .news__header
+
+  &__header {
+  }
+
+  // .news__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(rem(300), rem(395)));
+    justify-content: space-between;
+    gap: rem(10);
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, minmax(rem(300), rem(395)));
+      gap: rem(15);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(300), rem(395)));
+      justify-content: center;
+    }
+  }
+
+  // .news__item
+
+  &__item {
+  }
+}
+.header-news {
+  display: flex;
+  justify-content: space-between;
+  @include adaptiveValue("margin-bottom", 64, 15);
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    row-gap: rem(15);
+  }
+  // .header-news__content
+
+  &__content {
+  }
+
+  // .header-news__title
+
+  &__title {
+    margin-bottom: em(12, 32);
+  }
+  // .header-news__btn
+
+  &__btn {
+    padding: rem(9) rem(19);
+  }
+
+  // .header-news__text
+
+  &__text {
+    max-width: rem(768);
+  }
+
+  // .header-news__block
+
+  &__block {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    width: 30%;
+    @media (max-width: $mobile) {
+      justify-content: start;
+      width: 100%;
+    }
+  }
+
+  // .header-news__button
+
+  &__button {
+  }
+}
+.item-news {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background: rgba(129, 129, 139, 0.1);
+  border-radius: rem(24);
+  overflow: hidden;
+  // .item-news__image
+
+  &__image {
+    max-width: 100%;
+    position: relative;
+    margin-bottom: rem(35);
+    padding-bottom: 49%;
+    & img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  // .item-news__special
+  &__special {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(129, 129, 139, 0.5);
+    border-radius: 0px rem(10) 0px 0px;
+    padding: rem(10);
+    color: #ffffff;
+  }
+
+  // .item-news__content
+
+  &__content {
+    padding: rem(40) rem(26);
+    @media (max-width: $mobile) {
+      padding: rem(15) rem(15);
+    }
+  }
+
+  // .item-news__date
+
+  &__date {
+    font-weight: 300;
+    line-height: math.div(24, 16);
+    margin-bottom: rem(20);
+    @media (max-width: $mobile) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  // .item-news__title
+
+  &__title {
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: math.div(27, 20);
+    color: #ffffff;
+    margin-bottom: rem(30);
+    @media (max-width: $mobile) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  // .item-news__text
+
+  &__text {
+    line-height: math.div(24, 16);
+    margin-bottom: rem(16);
+    @media (max-width: $mobile) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  // .item-news__button
+
+  &__button {
+    font-weight: 300;
+    font-size: rem(14);
+    line-height: math.div(22, 14);
+    color: #3d96f4;
+  }
+
+  // .item-news__link
+
+  &__link {
+  }
+}
+.item-news-1 {
 }
