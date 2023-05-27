@@ -156,7 +156,26 @@
     }
   }
 }
-//=============================================
+.btn-tr {
+  font-style: normal;
+  font-weight: 300;
+  font-size: rem(10);
+  line-height: math.div(17, 10);
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $subTitleColor;
+  border: 1px solid $subTitleColor;
+  border-radius: rem(12);
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #5a5656;
+      color: #ffffff;
+    }
+  }
+}
 section {
   @include adaptiveValue("padding-top", 60, 15);
   @include adaptiveValue("padding-bottom", 60, 15);
@@ -175,27 +194,5 @@ section {
   line-height: math.div(27, 18);
   @media (max-width: $mobile) {
     font-size: rem(16);
-  }
-}
-.btn-tr {
-  font-style: normal;
-  font-weight: 300;
-  font-size: rem(10);
-  line-height: math.div(17, 10);
-  display: flex;
-  align-items: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $subTitleColor;
-
-  border: 1px solid $subTitleColor;
-  border-radius: rem(12);
-  transition: all 0.3s ease 0s;
-  margin-bottom: rem(20);
-  @media (any-hover: hover) {
-    &:hover {
-      background-color: #5a5656;
-      color: #ffffff;
-    }
   }
 }

@@ -1,3 +1,253 @@
-//====================================================================================================
+//=============================================
+.footer {
+  // .footer__container
 
-//====================================================================================================
+  &__container {
+  }
+  // .footer__content
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("column-gap", 64, 15, 1500, 1230, 1);
+    @include adaptiveValue("padding-top", 60, 15);
+    @include adaptiveValue("padding-bottom", 60, 15);
+  }
+
+  // .footer__social
+
+  &__social {
+    max-width: rem(380);
+    border: 1px solid green;
+    @media (max-width: em(1230)) {
+      max-width: rem(330);
+    }
+  }
+
+  // .footer__logo
+
+  &__logo {
+    margin-bottom: rem(32);
+  }
+
+  // .footer__text
+
+  &__text {
+    font-weight: 300;
+    font-size: rem(16);
+    line-height: math.div(24, 16);
+    margin-bottom: rem(33);
+  }
+
+  // .footer__icons
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: rem(245);
+  }
+
+  // .footer__icon
+
+  &__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 rem(36);
+    height: rem(36);
+    border-radius: 50%;
+    padding: rem(10);
+    border: 1px solid rgba(129, 129, 139, 0.9);
+    & img {
+      position: absolute;
+      max-width: rem(20);
+      max-height: rem(20);
+    }
+  }
+
+  // .footer__pages
+
+  &__pages {
+  }
+
+  // .footer__utilites
+
+  &__utilites {
+  }
+
+  // .footer__subscribe
+
+  &__subscribe {
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+    padding: rem(45) 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: rem(14);
+    line-height: math.div(22, 14);
+  }
+}
+.pages-menu {
+  border: 1px solid green;
+  // .pages-menu__list
+
+  &__list {
+  }
+
+  // .pages-menu__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  // .pages-menu__link
+
+  &__link {
+    // display: inline-block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: rem(-5);
+      left: 0;
+      background-color: #fff;
+      scale: 0;
+      transition: scale 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &:before {
+          scale: 1;
+        }
+      }
+    }
+  }
+}
+.spollers {
+  // .spollers__item
+
+  &__item {
+  }
+
+  // .spollers__title
+
+  &__title {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    letter-spacing: 1px;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: em(30, 20);
+    }
+  }
+
+  // .spollers__body
+
+  &__body {
+  }
+}
+.utilites-menu {
+  border: 1px solid green;
+
+  // .utilites-menu__list
+
+  &__list {
+  }
+
+  // .utilites-menu__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  // .utilites-menu__link
+
+  &__link {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: rem(-5);
+      left: 0;
+      background-color: #fff;
+      scale: 0;
+      transition: scale 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &:before {
+          scale: 1;
+        }
+      }
+    }
+  }
+}
+.subscribe {
+  border: 1px solid green;
+  max-width: rem(455);
+  @include adaptiveValue("padding-right", 75, 10, 1500, 1230, 1);
+  @media (max-width: em(1230)) {
+    max-width: rem(380);
+  }
+
+  // .subscribe__title
+
+  &__title {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    letter-spacing: 1px;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: em(30, 20);
+    }
+  }
+
+  // .subscribe__text
+
+  &__text {
+    font-weight: 300;
+    line-height: math.div(24, 16);
+    margin-bottom: rem(33);
+  }
+
+  // .subscribe__form
+
+  &__form {
+    display: flex;
+  }
+
+  // .subscribe__input
+
+  &__input {
+    width: rem(225);
+    height: rem(54);
+    border: 1px solid rgba(129, 129, 139, 0.3);
+    border-radius: rem(50);
+    padding-left: rem(33);
+    background-color: transparent;
+    margin: 0px rem(16) 0px 0px;
+  }
+
+  // .subscribe__button
+
+  &__button {
+    max-width: rem(136);
+  }
+}
+.button {
+}
