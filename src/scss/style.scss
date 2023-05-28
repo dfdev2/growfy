@@ -85,10 +85,12 @@ body {
       max-width: rem($maxWidthContainer);
       box-sizing: content-box;
       margin: 0 auto;
-      border: 1px solid red;
     }
     @if ($containerPadding>0) {
       padding: 0 rem(math.div($containerPadding, 2));
+      @media (max-width: $mobileSmall) {
+        padding: 0 rem(5);
+      }
     }
   }
 } @else {

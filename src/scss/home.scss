@@ -236,6 +236,9 @@
 
   &__button {
     padding: rem(18) rem(29);
+    @media (max-width: $mobileSmall) {
+      flex: 0 0 rem(160);
+    }
   }
 
   // .services__link
@@ -866,6 +869,10 @@
   // .ready__container
 
   &__container {
+  }
+  // .ready__body
+
+  &__body {
     display: flex;
     justify-content: space-between;
     background: rgba(129, 129, 139, 0.1);
@@ -935,7 +942,7 @@
       background: rgba(129, 129, 139, 0.2);
       border-radius: rem(50);
       @media (max-width: $mobile) {
-        padding: rem(13) rem(28);
+        padding: rem(13) rem(25);
       }
     }
   }
