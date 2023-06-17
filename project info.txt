@@ -1,9 +1,0 @@
-https://github.com/dfdev2/growfy.git
-
-echo "# growfy" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M source
-git remote add origin https://github.com/dfdev2/growfy.git
-git push -u origin source
