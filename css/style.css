@@ -342,7 +342,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background-color: #000;
+  background-color: transparent;
 }
 
 .header-menu__items {
@@ -1752,6 +1752,7 @@ body {
     -webkit-transition: right 0.3s ease 0s;
     -o-transition: right 0.3s ease 0s;
     transition: right 0.3s ease 0s;
+    background-color: #0d0d11;
   }
 
   .menu-open .header-menu {
